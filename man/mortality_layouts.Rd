@@ -5,6 +5,13 @@
 \alias{mortality_layouts}
 \alias{data_multiple_mortality_1969}
 \alias{data_multiple_mortality_2023}
+\alias{data_multiple_mortality_2017}
+\alias{data_multiple_mortality_2018}
+\alias{data_multiple_mortality_2019}
+\alias{data_multiple_mortality_2020}
+\alias{data_multiple_mortality_2021}
+\alias{data_multiple_mortality_2022}
+\alias{data_multiple_mortality_2024}
 \title{Mortality multiple cause data layouts}
 \format{
 A tibble with 7 variables:
@@ -21,6 +28,20 @@ A tibble with 7 variables:
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 43 rows and 7 columns.
 
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 91 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 88 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 89 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 89 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 93 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 89 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 91 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 91 rows and 7 columns.
 }
 \source{
 \url{https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/DVS/mortality/}
@@ -29,6 +50,20 @@ An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) w
 data_multiple_mortality_1969
 
 data_multiple_mortality_2023
+
+data_multiple_mortality_2017
+
+data_multiple_mortality_2018
+
+data_multiple_mortality_2019
+
+data_multiple_mortality_2020
+
+data_multiple_mortality_2021
+
+data_multiple_mortality_2022
+
+data_multiple_mortality_2024
 }
 \description{
 Metadata tables describing the fixed-width file layout for US mortality
@@ -42,5 +77,45 @@ This is an early year with limited coding — several fields left blank.
 This year introduced a revised race classification schema.
 
 Additional cause of death fields were added to the layout this year.
+
+Both 1989 and 2003 education revision fields are present. Bridged-race
+variables are the only race summary fields; \code{race_recode_40} is absent.
+
+Occupation and industry fields are absent. \code{method_of_disposition}
+uses a simplified code set (Burial, Cremation, Other, Unknown only).
+
+Both education revision fields are present, though the 1989 field is
+blank in practice as all states completed the 2003 transition this year.
+
+\code{race_recode_40} is introduced alongside the existing bridged-race
+variables. Occupation and industry fields are absent.
+
+Layout is structurally identical to 2018. Five records were corrected
+in a March 2021 re-release, recoding erroneous terrorism firearm deaths to \code{X95}.
+
+\code{method_of_disposition} retains the simplified code set from
+2017–2018; occupation and industry fields are absent.
+
+Occupation and industry fields are introduced for the first time, with
+data from 46 participating states coded to 2012 Census classifications via NIOSH.
+
+This is the first year in which COVID-19 (\code{U07.1}) appears as a
+cause of death and is included as a rankable cause in the recode lists.
+
+The \code{record_type} field is introduced at position 19. The 1989
+education revision field is removed, as is the full bridged-race variable block.
+
+\code{race_recode_40} is now the sole race summary field, using the
+1997 OMB standard. Occupation and industry fields are retained.
+
+Layout follows the 2021 structure with \code{record_type}, 2003-only
+education, and \code{race_recode_40} as the sole race summary field.
+
+Occupation and industry fields are retained.
+
+Layout follows the 2021–2022 structure with \code{record_type}, 2003-only
+education, and \code{race_recode_40} as the sole race summary field.
+
+Occupation and industry fields are retained.
 }
 \keyword{datasets}

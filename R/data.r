@@ -49,3 +49,50 @@ NULL
 #' @note This year introduced a revised race classification schema.
 #' @note Additional cause of death fields were added to the layout this year.
 "data_multiple_mortality_2023"
+
+#' @rdname mortality_layouts
+#' @note Both 1989 and 2003 education revision fields are present. Bridged-race
+#'   variables are the only race summary fields; \code{race_recode_40} is absent.
+#' @note Occupation and industry fields are absent. \code{method_of_disposition}
+#'   uses a simplified code set (Burial, Cremation, Other, Unknown only).
+"data_multiple_mortality_2017"
+
+#' @rdname mortality_layouts
+#' @note Both education revision fields are present, though the 1989 field is
+#'   blank in practice as all states completed the 2003 transition this year.
+#' @note \code{race_recode_40} is introduced alongside the existing bridged-race
+#'   variables. Occupation and industry fields are absent.
+"data_multiple_mortality_2018"
+
+#' @rdname mortality_layouts
+#' @note Layout is structurally identical to 2018. Five records were corrected
+#'   in a March 2021 re-release, recoding erroneous terrorism firearm deaths to \code{X95}.
+#' @note \code{method_of_disposition} retains the simplified code set from
+#'   2017–2018; occupation and industry fields are absent.
+"data_multiple_mortality_2019"
+
+#' @rdname mortality_layouts
+#' @note Occupation and industry fields are introduced for the first time, with
+#'   data from 46 participating states coded to 2012 Census classifications via NIOSH.
+#' @note This is the first year in which COVID-19 (\code{U07.1}) appears as a
+#'   cause of death and is included as a rankable cause in the recode lists.
+"data_multiple_mortality_2020"
+
+#' @rdname mortality_layouts
+#' @note The \code{record_type} field is introduced at position 19. The 1989
+#'   education revision field is removed, as is the full bridged-race variable block.
+#' @note \code{race_recode_40} is now the sole race summary field, using the
+#'   1997 OMB standard. Occupation and industry fields are retained.
+"data_multiple_mortality_2021"
+
+#' @rdname mortality_layouts
+#' @note Layout follows the 2021 structure with \code{record_type}, 2003-only
+#'   education, and \code{race_recode_40} as the sole race summary field.
+#' @note Occupation and industry fields are retained.
+"data_multiple_mortality_2022"
+
+#' @rdname mortality_layouts
+#' @note Layout follows the 2021–2022 structure with \code{record_type}, 2003-only
+#'   education, and \code{race_recode_40} as the sole race summary field.
+#' @note Occupation and industry fields are retained.
+"data_multiple_mortality_2024"
