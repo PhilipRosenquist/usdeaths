@@ -13,12 +13,14 @@ jobs:
   check:
     runs-on: ${{ matrix.config.os }}
     name: ${{ matrix.config.os }} (R ${{ matrix.config.r }})
+    # if: github.event_name == 'pull_request' || github.repository == 'byuirpytooling/usdeaths'
 
     strategy:
       fail-fast: false
       matrix:
         config:
-          - { os: ubuntu-latest, r: "devel" }
+          # R devel is important for CRAN submissions, but we aren't there yet and its slow. Let's not run for now...
+          # - { os: ubuntu-latest, r: "devel" }
           - { os: ubuntu-latest, r: "release" }
           - { os: ubuntu-latest, r: "oldrel" }
           - { os: windows-latest, r: "release" }
